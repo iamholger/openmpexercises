@@ -9,9 +9,9 @@ unsigned long crosscheck(unsigned long N)
 int main()
 {
     unsigned long N = 1000000000;
-
     unsigned long result = 0;
-#pragma omp parallel
+    
+    #pragma omp parallel default(none)
     {
         unsigned long temp = 0;
   
@@ -21,10 +21,11 @@ int main()
             temp += i;
         }
 
+        #pragma omp critical
         result += temp;
     }
 
-    printf("Result: %lu\n", result);
+    printf("Result:    %lu\n", result);
     printf("Should be: %lu\n", crosscheck(N));
 
     return 0;
