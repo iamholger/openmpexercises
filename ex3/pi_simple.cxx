@@ -31,7 +31,7 @@ int main() {
    
   double t_0 = omp_get_wtime(); // time stamp
 
-  #pragma omp parallel for // reduction(*:sum)
+  #pragma omp parallel for default(none)// reduction(*:sum)
   for (int i = 1; i <= num_steps; i++) 
   {
     double x = a + (i - 0.5) * stepsize;
