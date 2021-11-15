@@ -1,5 +1,4 @@
 #include <cstdio>
-#include <cstdlib>
 #include "omp.h"
 
 unsigned long crosscheck(unsigned long N)
