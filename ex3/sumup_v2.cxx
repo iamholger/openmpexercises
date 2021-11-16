@@ -21,7 +21,6 @@ int main()
             temp += i;
         }
 
-        #pragma omp critical
         result += temp;
     }
 
