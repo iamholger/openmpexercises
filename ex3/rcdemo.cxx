@@ -2,7 +2,7 @@
 
 int main() {
     int a=10;
-    #pragma omp parallel
+    #pragma omp parallel default(none) shared(a)
     {
         a = a+1;
     }
