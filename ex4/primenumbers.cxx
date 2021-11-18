@@ -35,7 +35,7 @@ int count_prime_numbers(int n)
       if ( i%j == 0 )            // As soon as we find a divisor, we can
       {                          //  exit this for loop as i is then not a prime number
         is_prime = 0;            //  we set is_prime to 0 in this case so that total is not changed
-        //break;                 // This exits the j-loop early
+        break;                 // This exits the j-loop early
       }
     }
     total = total + is_prime; // The logic here is, if i happened to be a prime number,
